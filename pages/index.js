@@ -21,7 +21,7 @@ const getDefaultWord = () => [
 const classNameByLetterState = {
   [LetterState.FOUND]: styles.letterInputFound,
   [LetterState.LOCATION_UNKNOWN]: styles.letterInputLocationUnknown,
-  [LetterState.NOT_FOUND]: styles.letterInputNotFound, // meh
+  [LetterState.NOT_FOUND]: styles.letterInputNotFound,
 };
 
 const getNextIndexes = (wordIndex, letterIndex) => {
