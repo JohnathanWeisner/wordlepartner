@@ -29,7 +29,7 @@ const getNextIndexes = (wordIndex, letterIndex) => {
     if (wordIndex >= 5) {
       return { nextWordIndex: 0, nextLetterIndex: 0 };
     }
-    return { nextWordIndex: wordIndex + 1, nextLetterIndex: 0 }; // heh
+    return { nextWordIndex: wordIndex + 1, nextLetterIndex: 0 };
   }
 
   return { nextWordIndex: wordIndex, nextLetterIndex: letterIndex + 1 };
