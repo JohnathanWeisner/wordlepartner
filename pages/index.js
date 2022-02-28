@@ -34,7 +34,6 @@ const getNextIndexes = (wordIndex, letterIndex) => {
 
   return { nextWordIndex: wordIndex, nextLetterIndex: letterIndex + 1 };
 };
-
 const getPreviousIndexes = (wordIndex, letterIndex) => {
   if (letterIndex === 0) {
     if (wordIndex === 0) {
