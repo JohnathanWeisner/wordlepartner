@@ -15,7 +15,7 @@ const getDefaultWord = () => [
   { value: '', letterState: LetterState.NOT_FOUND },
   { value: '', letterState: LetterState.NOT_FOUND },
   { value: '', letterState: LetterState.NOT_FOUND },
-  { value: '', letterState: LetterState.NOT_FOUND }, // heh
+  { value: '', letterState: LetterState.NOT_FOUND },
 ];
 
 const classNameByLetterState = {
