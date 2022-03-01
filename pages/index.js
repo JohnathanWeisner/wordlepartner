@@ -169,10 +169,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Wordle Partner</title>
-        <meta
-          name="description"
-          content="Partner for wordle to narrow in on words"
-        />
+        <meta name="description" content="Get unstuck fast." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
