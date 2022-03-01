@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { words as allWords } from '../constants/words';
 
@@ -47,6 +46,7 @@ const getPreviousIndexes = (wordIndex, letterIndex) => {
 
 export default function Home() {
   const inputRefs = useRef([[], [], [], [], [], []]);
+  const [inputRendered, setInputRendered] = useState(false);
   const [words, setWords] = useState([
     getDefaultWord(),
     getDefaultWord(),
@@ -55,6 +55,13 @@ export default function Home() {
     getDefaultWord(),
     getDefaultWord(),
   ]);
+  const firstInput = inputRefs.current?.[0]?.[0];
+
+  useEffect(() => {
+    if (inputRendered && firstInput) {
+      firstInput.focus();
+    }
+  }, [inputRendered, firstInput]);
 
   const foundLetters = [];
   const letterLocationsFoundLookup = {};
@@ -181,9 +188,10 @@ export default function Home() {
                     className={styles.letterWrapper}
                   >
                     <input
-                      ref={(el) =>
-                        (inputRefs.current[wordIndex][letterIndex] = el)
-                      }
+                      ref={(el) => {
+                        inputRefs.current[wordIndex][letterIndex] = el;
+                        setInputRendered(true);
+                      }}
                       className={classNameByLetterState[letterState]}
                       value={value}
                       onKeyDown={(event) => {
