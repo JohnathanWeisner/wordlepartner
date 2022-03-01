@@ -276,7 +276,7 @@ export default function Home() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
-            gtag('config', 'G-ZP4VD5QN4B');
+            gtag('config', 'UA-221726539-1');
         `}
       </Script>
     </div>
