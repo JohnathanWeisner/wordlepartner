@@ -267,7 +267,7 @@ export default function Home() {
         </div>
       </main>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-ZP4VD5QN4B"
+        src="https://www.googletagmanager.com/gtag/js?id=UA-221726539-1"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
